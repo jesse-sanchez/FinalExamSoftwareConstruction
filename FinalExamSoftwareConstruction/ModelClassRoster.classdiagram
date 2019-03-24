@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e9d38214-a443-49d9-88ad-f949b452ec11" name="ModelClassRoster" linkedPackageId="fd4bcdff-d95f-49b5-898b-1f3442d165ec" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7753925b-d5f4-4f49-b0b6-b996c1ba8cc9">
+      <profileInstance Id="c55d8bf1-bc6b-49fb-89ad-2a233e812bfe" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ad38baa4-311e-4955-b61f-72bf5dbe6288">
+      <profileInstance Id="733535c2-5cd0-43de-8a4e-ae4772c882d8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="810d3369-7ad8-47e4-b205-d8a8cc9a7dfe" name="Class Roster" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d6c7055-852d-4f95-bdd1-df8c47acc0f2" />
+        <targetEnds>
+          <association Id="cc0571fd-5f8b-46f7-b9ac-4c07b4ade2bb" isDerived="false" sourceEndRoleName="Class Roster" targetEndRoleName="Sign-In Record" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c70bb288-7b2c-4d10-9f49-0efeabbb14fe" LastKnownName="Sign-In Record" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="533946d4-eef7-413b-9d9e-5fea0d7b14e7" name="Class Roster" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4874f74e-ebfe-4f8a-94ba-dabc52ac6de1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f86753c-1c34-48ff-98be-7fa5b53a49e2" name="Sign-In Record" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="481ce335-2668-440d-bc95-9cda73d1af23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9abcc37c-778a-4517-850e-173b3b5d01d4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="185145eb-722e-4ec0-9001-227d80cbb7bb" name="Class Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ca883580-a496-42a8-923e-25b3ccca4f91" />
+          </property>
+          <property Id="8c9e6334-cd12-4be7-9ace-9ad6c71a00c8" name="Lecturer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6fdd152-a123-4748-98ee-8c1b42c9aaeb" />
+          </property>
+          <property Id="ee74d7a5-c8bb-4081-8065-b457e48495bf" name="Students" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06d74611-5cb5-44e2-8d8e-eb5b70106bd4" />
+          </property>
+          <property Id="ab726fc7-5e24-4572-9b86-fc2a861714c0" name="Semester" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="23b9a1dc-d4f6-494b-8804-3fb4998815a4" />
+          </property>
+          <property Id="fdaf6fb1-8873-44ec-9ecd-63ba996b73b4" name="Location" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a56e1fab-1a89-4ca7-bd4e-842fe9e571de" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c70bb288-7b2c-4d10-9f49-0efeabbb14fe" name="Sign-In Record" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9e8d56ff-a1d0-4981-8da9-fa7c10f1277e" />
+        <ownedAttributesInternal>
+          <property Id="91ca57d2-0177-460e-a3f4-eba2bcbdb52a" name="Student Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12494843-b03c-4e34-b0e0-5681291b0f02" />
+          </property>
+          <property Id="736aadef-18d0-4893-9606-565160b6ae03" name="Lecture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b585f7dc-f3bf-4d93-9205-dedf23ba1b0d" />
+          </property>
+          <property Id="c6f58df7-2c3a-4f2e-a292-721963b0d2b9" name="Lecture Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="613ecd5c-0561-4d33-ab2b-97aa262e13bc" />
+          </property>
+          <property Id="0c35e894-582d-42dd-b9d7-32a8ce8b0ea9" name="Sign-In Time" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de4bb87d-9748-4b1d-9896-fc5971e26114" />
+          </property>
+          <property Id="59370895-edd1-4c40-972e-87fb2e6221ef" name="Sign-out Time" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dd7b271a-e93e-4af8-93cc-26bd7abb1a8a" />
+          </property>
+          <property Id="ce38144f-b704-4d13-92ad-2538662ac6b4" name="Lecturer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8e09ac02-d3c1-412c-a54b-afd08afad520" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="fd4bcdff-d95f-49b5-898b-1f3442d165ec" name="FinalExamSoftwareConstruction">
+    <elementDefinition Id="fe560f34-1b24-48c8-b19c-f5160fd0fbf5" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e9f7baa6-167d-4840-a1ae-43ce9908a766" name="BrainstormingAttendanceSystem" linkedPackageId="8311e2a0-0659-44e1-85af-9b93e9343ce9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="79d2ec73-a744-489a-b24f-6c37dd2b7829">
+      <elementDefinition Id="7382168c-e803-42bd-b113-7b94a9d6ea38" />
+      <body>-Electronic sign in
+-Electronic sign out</body>
+    </comment>
+    <comment Id="bafb1e33-4c66-4325-9455-76f989f09d62">
+      <elementDefinition Id="6265aa76-c38e-4c69-a648-6d66b9db7eb6" />
+      <body>-Create electronic class roster
+-View history of per student
+-View history of lecture attendance
+-Edit Rosters
+-Edit Attendance</body>
+    </comment>
+    <comment Id="b33b66ed-ba21-4880-afae-9c298858a10a">
+      <elementDefinition Id="e4dcd6bc-dec3-44c8-a651-bb630e868f29" />
+      <body>Constraints:
+Students must have smart card every lecture</body>
+    </comment>
+    <comment Id="f5f258a6-147a-4358-8266-5acf87f41520">
+      <elementDefinition Id="6128babb-4d94-4166-9855-55c872600cdb" />
+      <body>-Add students to school rosters
+-Gather stats for overall class sizes
+</body>
+    </comment>
+    <comment Id="d8b28aae-b3a6-4bab-ba4e-2371d7971691">
+      <elementDefinition Id="9a73f1f3-7dd1-45ba-bd7d-8d300c1554e9" />
+      <body>Functional Requirements</body>
+      <annotatedElements>
+        <commentMoniker Id="79d2ec73-a744-489a-b24f-6c37dd2b7829" />
+        <commentMoniker Id="f5f258a6-147a-4358-8266-5acf87f41520" />
+        <commentMoniker Id="bafb1e33-4c66-4325-9455-76f989f09d62" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c272c116-607f-4c6d-b2b2-012736d8ad30">
+      <profileInstance Id="1a2e9233-0535-45f1-a0f9-2d86dd7ba70b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a6644a34-4d5d-4fb8-b633-f3b22d6ddc8c">
+      <profileInstance Id="26868a18-9401-458a-92fb-a6db8db86078" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="597cd439-d479-4669-8f88-63fcdd6edc28" name="Student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e189354a-7545-4313-8254-9cb5aa7634e7" />
+        <targetEnds>
+          <association Id="51cb3f0a-46a8-4cab-8d7f-cc487021e186" isDerived="false" sourceEndRoleName="Student" targetEndRoleName="Attendance System Using Smart Card" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="bf7d36cb-3d18-45e0-89a9-a282c3f0e270" LastKnownName="Attendance System Using Smart Card" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e152972-2bba-477c-a575-e6e64396ed5e" name="Student" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fe6387f1-ec72-4a8d-a525-a46400204028" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d326c6d-431a-4b34-bd43-ff6c89cf52f0" name="Attendance System Using Smart Card" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0ee8003a-d364-4ad9-b1ce-2230e10abc36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f6fdc58b-b96a-4b0a-b342-ca1174dc3bbf" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="e2911b0b-4aed-4069-bf83-9e24c98c8c15" name="Lecturer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1519a26-ec6f-4fc4-9cfe-1eeafaf04387" />
+        <targetEnds>
+          <association Id="de66040e-c611-4735-938f-0c94d80e19f4" isDerived="false" sourceEndRoleName="Lecturer" targetEndRoleName="Attendance System Using Smart Card" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="bf7d36cb-3d18-45e0-89a9-a282c3f0e270" LastKnownName="Attendance System Using Smart Card" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="517d79ab-bf68-4b95-9c81-7a4087bcbb9f" name="Lecturer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca6f8704-4ce8-456c-a672-bfed4957f438" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5964f922-8cae-4981-b508-b85f93368911" name="Attendance System Using Smart Card" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="12659434-4943-4592-86c9-f770a88ff302" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60b484ee-0633-4978-aac2-6d1a400aaa2a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="bf7d36cb-3d18-45e0-89a9-a282c3f0e270" name="Attendance System Using Smart Card" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="f8fb10c8-1bd6-4247-be86-3c0d4665852d">
+            <elementDefinition Id="e32f11ab-80b8-486c-9448-a665b2f79e65" />
+            <body>Attendance System:
+The Smart Attendance will help mark the attendance of students attending a particular lecture, without the disadvantages of regular paper attendance sheets. </body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="8eb5630e-b432-4081-8222-ceda95e76119" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="92a3f73d-e8ba-44d2-b3a2-837a98b1997e" name="Administrators" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="46164f11-03ef-4fe4-aced-c1b02ae1d179" />
+        <targetEnds>
+          <association Id="dd57ab43-1a40-4835-be5f-96636624fe4c" isDerived="false" sourceEndRoleName="Administrators" targetEndRoleName="Attendance System Using Smart Card" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="bf7d36cb-3d18-45e0-89a9-a282c3f0e270" LastKnownName="Attendance System Using Smart Card" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c425d784-9980-4ba8-a20b-3a6c6c53b06a" name="Administrators" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e553eff-88ee-495d-9664-e695c8d8ddec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0ee3157-2e81-47ff-96b3-bac4d80f4a60" name="Attendance System Using Smart Card" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e0363b2e-8a22-42bc-810e-f728fed36aa0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b4f2752d-1075-4573-9b79-8c08b01d9b86" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="8311e2a0-0659-44e1-85af-9b93e9343ce9" name="FinalExamSoftwareConstruction">
+    <elementDefinition Id="fe560f34-1b24-48c8-b19c-f5160fd0fbf5" />
+  </package>
+</useCaseModelRoot>

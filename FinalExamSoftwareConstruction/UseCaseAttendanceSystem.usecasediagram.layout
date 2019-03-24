@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UseCaseAttendanceSystem">
+  <useCaseModelRootMoniker Id="1e8b4b63-8f0e-4cac-82f2-83e20969d6e0" />
+  <nestedChildShapes>
+    <actorShape Id="0ccbcfa8-e454-42db-9aa9-9c2876369729" absoluteBounds="1.25, 1.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="b2eeac7f-c8b7-4e6d-8e4e-b60e0d50b282" LastKnownName="Student" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="701fdd68-18d1-4904-b4e0-18ad0e8998e4" absoluteBounds="1.25, 3.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="a3aea8c3-37ef-4991-850c-858884797373" LastKnownName="Lecturer" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="a32d00c7-68cf-4b87-827a-a1a1113e627e" absoluteBounds="2.625, 1.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="6256116e-7c36-46f5-8ea6-64bae926e524" LastKnownName="Sign In Lecture" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.75 : 1.5); (2.625 : 1.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="8e2351ac-f417-42a9-a952-bd75f253e8ce" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="0ccbcfa8-e454-42db-9aa9-9c2876369729" />
+        <useCaseShapeMoniker Id="a32d00c7-68cf-4b87-827a-a1a1113e627e" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="42861e8f-8dae-4879-a8c1-e634e71989ca" absoluteBounds="4.625, 1.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="6b797a83-ff98-448a-aeea-00d659f65f5d" LastKnownName="Sign Out Lecture" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.625 : 1.5); (4.625 : 1.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ba4ea202-005b-42f5-9467-8506f6c0db02" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="a32d00c7-68cf-4b87-827a-a1a1113e627e" />
+        <useCaseShapeMoniker Id="42861e8f-8dae-4879-a8c1-e634e71989ca" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <actorShape Id="7501d90e-03cd-4a22-a22f-b392912de606" absoluteBounds="1.125, 6.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="c09df34d-3673-426b-9aa7-3df7589badab" LastKnownName="Administrators" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="5e239c45-9aa0-4204-952d-4035889b96b4" absoluteBounds="2.5, 2.75, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e3d472ef-349f-4e37-a8d4-c9e9f67bc080" LastKnownName="Create Lecture Roster" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.75 : 3.54166666666667); (2.54309422568987 : 3.27730192477004)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="f6d9a253-e66c-4b1b-accc-45066d70cee6" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="701fdd68-18d1-4904-b4e0-18ad0e8998e4" />
+        <useCaseShapeMoniker Id="5e239c45-9aa0-4204-952d-4035889b96b4" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="dba35abd-d175-4bee-8cfe-6876867175ca" absoluteBounds="2.375, 6.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="aa4ef869-fa69-4cdb-b4f5-fbc01e10b382" LastKnownName="Add Student to Database" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.625 : 6.70833333333333); (2.40065835097474 : 6.57905694150421)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="dc94b193-101f-4243-82b3-6ee49146cfd2" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="7501d90e-03cd-4a22-a22f-b392912de606" />
+        <useCaseShapeMoniker Id="dba35abd-d175-4bee-8cfe-6876867175ca" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="59389ce2-6d87-4884-a6bf-215ddf81d031" absoluteBounds="4.125, 2.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="2a5ae82e-512b-4a75-925d-22729383576a" LastKnownName="Edit Lecture Rosters" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.5 : 3.125); (4.125 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="81ece377-f521-4e1e-ada9-e4f91c7d403d" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="5e239c45-9aa0-4204-952d-4035889b96b4" />
+        <useCaseShapeMoniker Id="59389ce2-6d87-4884-a6bf-215ddf81d031" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="f230e961-1ee2-46e8-a383-d1ce87d21b6b" absoluteBounds="2.375, 4, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="f407a4a8-52da-43f8-9583-b607f7f21443" LastKnownName="View attendance history" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.75 : 3.76136363636364); (2.47063195784841 : 4.15443561337186)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="2966490d-5219-4fbb-95d4-27bf04410d0e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="701fdd68-18d1-4904-b4e0-18ad0e8998e4" />
+        <useCaseShapeMoniker Id="f230e961-1ee2-46e8-a383-d1ce87d21b6b" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="0e20a116-eef8-4a6c-8aa1-98f0f5641a48" absoluteBounds="4.125, 4.5, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="aa8085d5-b78c-4565-a80e-a219daf213ce" LastKnownName="Edit lecture attendance history" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.34224386746448 : 4.508498247847); (4.15775613253552 : 4.741501752153)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="465d28f4-0994-4ea7-8365-4e1bf3eaae0e" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f230e961-1ee2-46e8-a383-d1ce87d21b6b" />
+        <useCaseShapeMoniker Id="0e20a116-eef8-4a6c-8aa1-98f0f5641a48" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="7f34351f-59ce-41bc-8d0d-e5787fecd4a5" absoluteBounds="4.125, 3.625, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="36ac6885-c2f2-4ddf-acbb-e95c95469133" LastKnownName="Edit student attendance" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.35576197382041 : 4.27197957703848); (4.14423802617959 : 4.10302042296152)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="fb651811-b05f-4334-a20d-def17a68e9a3" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f230e961-1ee2-46e8-a383-d1ce87d21b6b" />
+        <useCaseShapeMoniker Id="7f34351f-59ce-41bc-8d0d-e5787fecd4a5" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="1101fd21-a148-4a19-8843-dfbe71b535fc" absoluteBounds="2.375, 7, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d62dcf57-bbd2-4025-a738-1b8d4169ac0d" LastKnownName="Gather stats on lecture attendance" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.625 : 6.85416666666667); (2.43792136193923 : 7.19288390080801)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="e05f46ac-687e-4aa9-8657-18e3fa3a2014" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="7501d90e-03cd-4a22-a22f-b392912de606" />
+        <useCaseShapeMoniker Id="1101fd21-a148-4a19-8843-dfbe71b535fc" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="a6b1b4d3-973f-4513-8a0f-fbcf1c8f8296" absoluteBounds="2.375, 5.125, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="1ad75d5c-4a27-4ce6-b6ad-65034ba7cdb6" LastKnownName="Verify student count" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.68333333333333 : 3.875); (2.63404062511392 : 5.17141903424626)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="9827ef55-3d67-4e87-91fd-17441630e91b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="701fdd68-18d1-4904-b4e0-18ad0e8998e4" />
+        <useCaseShapeMoniker Id="a6b1b4d3-973f-4513-8a0f-fbcf1c8f8296" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

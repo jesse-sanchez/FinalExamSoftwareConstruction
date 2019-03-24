@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3e3c4392-6ea5-4883-8c28-0ac69ff37312" name="ActivityDiagramAddStudent" linkedPackageId="3755dfdc-d200-49b6-9c74-8563e977236c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="80657037-1e62-408f-bd19-b1f77085fa3e">
+      <profileInstance Id="41dbe5ec-a7d1-4542-8364-e5bf324a1a88" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1163c7e3-fddf-435b-b313-3481c1767958">
+      <profileInstance Id="13905a54-80ee-4cb0-ad27-e24c789579bc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5ab3d904-b7af-4e8e-b0a2-b7fd5a824493" name="ActivityDiagramAddStudent" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="2ff3901a-ad33-48c6-b026-b09c36aff030" />
+        <nodes>
+          <initialNode Id="32856c88-ca2e-49a5-baee-39ecfaaca89b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="80fa8f29-aa1d-4e89-a297-2517bae94f46" />
+            <flowNodeTargets>
+              <controlFlow Id="7b75492f-759c-44b9-ac4e-2b62db63e050" isLeaf="false">
+                <opaqueActionMoniker Id="d63a69af-6ef9-4f8a-b938-1da6c56b2e61" LastKnownName="Student Applies to School" />
+                <elementDefinition Id="0211a588-1f5e-42d1-877c-83a2fd0b53f7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="d63a69af-6ef9-4f8a-b938-1da6c56b2e61" name="Student Applies to School" isLeaf="false">
+            <elementDefinition Id="0e27953f-ccb7-4bd0-a4ef-4311d9544f3e" />
+            <flowNodeTargets>
+              <controlFlow Id="9c5ed21c-3e10-4c2a-900c-bc74db5cd056" isLeaf="false">
+                <decisionNodeMoniker Id="ef65bcdb-732b-42a6-be94-ae4eedeec1ca" LastKnownName="Decision1" />
+                <elementDefinition Id="932e0726-9151-4d2d-ae2f-1c6aea9c9aee" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2fc21907-6675-40ab-8481-11305435d246" name="Add Student to School Database" isLeaf="false">
+            <elementDefinition Id="44ec88df-01c2-4d8a-bcaf-5d5b7e066619" />
+            <flowNodeTargets>
+              <controlFlow Id="02a62732-ee1b-4ae7-96c5-84993e387e97" isLeaf="false">
+                <activityFinalNodeMoniker Id="82617630-fb0a-428b-b088-2757764883aa" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="b3630d42-7140-469e-b27a-1dd86a69e586" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="ef65bcdb-732b-42a6-be94-ae4eedeec1ca" name="Decision1" isLeaf="false">
+            <elementDefinition Id="ecb17804-11b5-4f9e-b5de-541de3c3dc07" />
+            <flowNodeTargets>
+              <controlFlow Id="9e9a36e2-e015-40b6-b4ca-b175eeedfea3" guard="Accepted" isLeaf="false">
+                <opaqueActionMoniker Id="2fc21907-6675-40ab-8481-11305435d246" LastKnownName="Add Student to School Database" />
+                <elementDefinition Id="16509530-3a52-4e93-89da-821938dfada1" />
+              </controlFlow>
+              <controlFlow Id="692ff821-0550-49d6-bc4b-96c939523759" guard="Not Accepted" isLeaf="false">
+                <opaqueActionMoniker Id="b4e831d2-43c8-40be-929f-d4c8cfe572b0" LastKnownName="Added to seperate database" />
+                <elementDefinition Id="6d13edc8-8017-4c12-9c19-691dbf2853ce" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="82617630-fb0a-428b-b088-2757764883aa" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="5edc1187-7197-4e68-a599-00f431fb1c28" />
+          </activityFinalNode>
+          <opaqueAction Id="b4e831d2-43c8-40be-929f-d4c8cfe572b0" name="Added to seperate database" isLeaf="false">
+            <elementDefinition Id="9c2a92f6-d2a5-4ff1-b06f-e13c5d2867b9" />
+            <flowNodeTargets>
+              <controlFlow Id="cc8f36d4-001b-4716-ac5d-68e6fc1c0304" isLeaf="false">
+                <activityFinalNodeMoniker Id="82617630-fb0a-428b-b088-2757764883aa" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="753d2528-9e7f-4da5-aa0b-c7a45949af91" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="3755dfdc-d200-49b6-9c74-8563e977236c" name="FinalExamSoftwareConstruction">
+    <elementDefinition Id="fe560f34-1b24-48c8-b19c-f5160fd0fbf5" />
+  </package>
+</activityRootModel>

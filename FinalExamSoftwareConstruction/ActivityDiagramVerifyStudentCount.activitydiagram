@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="9e7109eb-34e5-4d60-b89f-e7f58de8b7ce" name="ActivityDiagramVerifyStudentCount" linkedPackageId="e6893a4a-53f9-45e2-afb3-389787b7530a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c3c24ee7-c41b-4a84-875c-dffdefef7170">
+      <profileInstance Id="9d3dc036-bd81-4016-8cfd-c61c4464393d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="15e36ada-336e-4563-8e10-39d1a149fd46">
+      <profileInstance Id="d9996a97-6b82-48c5-b928-044a00bfcde1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="a94f549d-404f-4908-bdcb-30c6180d2eeb" name="ActivityDiagramVerifyStudentCount" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b0557079-be99-4e93-a51b-635a3fd6081b" />
+        <nodes>
+          <initialNode Id="215653b7-804a-4c59-8296-5ab391092615" name="Initial1" isLeaf="false">
+            <elementDefinition Id="3b8f4176-51cb-4d82-bdf6-a8d16d6c2c91" />
+            <flowNodeTargets>
+              <controlFlow Id="59eb74dd-92d0-4c49-acba-3e8c00ede048" isLeaf="false">
+                <opaqueActionMoniker Id="8da581f7-0739-4627-9ed9-e60d4253e514" LastKnownName="Students Sign-In" />
+                <elementDefinition Id="f3ac6fa5-3c60-47ae-a8eb-bf80adceea55" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="5dda182e-568d-4ae1-9b77-47c78256c071" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="6fb112e1-6b8b-41bd-998c-0a0abbea15b8" />
+          </activityFinalNode>
+          <opaqueAction Id="8da581f7-0739-4627-9ed9-e60d4253e514" name="Students Sign-In" isLeaf="false">
+            <elementDefinition Id="5f72f699-a4c2-4115-8487-fec998059a58" />
+            <flowNodeTargets>
+              <controlFlow Id="285fdf12-3c90-4f1c-b82f-e36f5ceb9061" isLeaf="false">
+                <forkNodeMoniker Id="a35c97ad-041b-4a6c-9aab-df981ce97435" LastKnownName="Fork1" />
+                <elementDefinition Id="ad8fde24-d913-4064-bdca-889dab27f5df" />
+              </controlFlow>
+              <controlFlow Id="c6b92442-18c6-42aa-9e70-8464620ef28a" isLeaf="false">
+                <opaqueActionMoniker Id="5d3e3108-98d7-4388-958d-dc38fcaabe30" LastKnownName="Electronic counter adds 1" />
+                <elementDefinition Id="92c0eef7-03ed-4012-b4f1-7800e45e00a9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="a35c97ad-041b-4a6c-9aab-df981ce97435" name="Fork1" isLeaf="false">
+            <elementDefinition Id="be2bffaf-6ab7-4fdb-8e6a-1cd93fd5415d" />
+            <flowNodeTargets>
+              <controlFlow Id="9927bbd3-45b4-4f2b-8b31-84798d1ccc8a" isLeaf="false">
+                <opaqueActionMoniker Id="e50dc50f-7d72-4f77-a080-141df534cf78" LastKnownName="Electronic Sign-In" />
+                <elementDefinition Id="d30fb9b6-141f-4ef5-9f49-55cd84f40973" />
+              </controlFlow>
+              <controlFlow Id="9079aee1-0959-4fc3-bd0c-58e1bd58514c" isLeaf="false">
+                <opaqueActionMoniker Id="062e3277-a82a-4a47-82e1-f39f6f080702" LastKnownName="Paper Sign-In" />
+                <elementDefinition Id="eda7210f-d3c7-4be6-8b01-ce962e226b4e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="e50dc50f-7d72-4f77-a080-141df534cf78" name="Electronic Sign-In" isLeaf="false">
+            <elementDefinition Id="b476852c-8281-440a-be74-af4ce92d7735" />
+            <flowNodeTargets>
+              <controlFlow Id="199d218b-d4c1-4048-8291-55dc5564c1a8" isLeaf="false">
+                <joinNodeMoniker Id="a4117ce3-7ac8-431d-931e-993071d52341" LastKnownName="Join1" />
+                <elementDefinition Id="1ccaa76b-628f-4d8f-ac9c-f1dd0f691357" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="062e3277-a82a-4a47-82e1-f39f6f080702" name="Paper Sign-In" isLeaf="false">
+            <elementDefinition Id="9ea0aef5-5d6b-4633-8f87-810429700ac4" />
+            <flowNodeTargets>
+              <controlFlow Id="1bebb822-1f22-46fc-864c-d3cea240148d" isLeaf="false">
+                <joinNodeMoniker Id="a4117ce3-7ac8-431d-931e-993071d52341" LastKnownName="Join1" />
+                <elementDefinition Id="eb7f8159-8027-44c9-84e3-0fcdf79af584" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="a4117ce3-7ac8-431d-931e-993071d52341" name="Join1" isLeaf="false">
+            <elementDefinition Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c" />
+            <flowNodeTargets>
+              <controlFlow Id="cc37bb89-2786-4ec0-8d99-bfb2e01fa8c2" isLeaf="false">
+                <opaqueActionMoniker Id="e10e11f1-ea16-486b-93bb-9facfd0d65c8" LastKnownName="Verify student count match" />
+                <elementDefinition Id="1e17c4c5-d61c-4e09-a79c-32853bf39e90" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="e10e11f1-ea16-486b-93bb-9facfd0d65c8" name="Verify student count match" isLeaf="false">
+            <elementDefinition Id="d5ff728e-a242-4e0a-9340-e9963d241c2b" />
+            <flowNodeTargets>
+              <controlFlow Id="bcc3ecfa-309e-41e3-983a-70f78aea98b7" isLeaf="false">
+                <decisionNodeMoniker Id="78e93265-2a6f-4082-9911-acfa741d200b" LastKnownName="Decision1" />
+                <elementDefinition Id="c2ba6531-122d-4027-b579-8f0b96c02187" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5d3e3108-98d7-4388-958d-dc38fcaabe30" name="Electronic counter adds 1" isLeaf="false">
+            <elementDefinition Id="99b61a49-1cb9-4328-a7de-35aa25b8d05a" />
+            <flowNodeTargets>
+              <controlFlow Id="06bcd7a2-5fb3-43d3-acbb-e9b41ba86338" isLeaf="false">
+                <joinNodeMoniker Id="a4117ce3-7ac8-431d-931e-993071d52341" LastKnownName="Join1" />
+                <elementDefinition Id="9b707da9-2f09-45ea-b5b1-b2209366bac8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="78e93265-2a6f-4082-9911-acfa741d200b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="61c55705-8651-4fcb-9fb2-29b5690cb44e" />
+            <flowNodeTargets>
+              <controlFlow Id="9cf57d92-9528-43c3-a9f7-f4a415bcc591" guard="Count Matches" isLeaf="false">
+                <activityFinalNodeMoniker Id="5dda182e-568d-4ae1-9b77-47c78256c071" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="92d3b089-8bf4-4885-8b4e-d07e59561833" />
+              </controlFlow>
+              <controlFlow Id="a4f76ee9-c89a-4fb0-91b1-3a0a381ea3af" guard="Recount" isLeaf="false">
+                <joinNodeMoniker Id="a4117ce3-7ac8-431d-931e-993071d52341" LastKnownName="Join1" />
+                <elementDefinition Id="a77d0479-4357-43f3-ab7b-aef8fee674cf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="e6893a4a-53f9-45e2-afb3-389787b7530a" name="FinalExamSoftwareConstruction">
+    <elementDefinition Id="fe560f34-1b24-48c8-b19c-f5160fd0fbf5" />
+  </package>
+</activityRootModel>

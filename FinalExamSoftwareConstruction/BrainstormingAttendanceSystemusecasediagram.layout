@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BrainstormingAirportSecurity">
+  <useCaseModelRootMoniker Id="1433656d-07ea-4120-ad6f-ca6807dd8103" />
+  <nestedChildShapes>
+    <actorShape Id="fd79a53b-fcae-4f56-8c6d-e924769bad70" absoluteBounds="1, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="67826afc-b9c8-4896-a99f-e68682270bce" LastKnownName="Actor1" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="278aaea1-3fcc-48df-80fb-bef5daa8b94e" absoluteBounds="3.5, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="5772dc73-dfbd-406b-873d-004cd058d41d" LastKnownName="Actor2" />
+      <relativeChildShapes />
+    </actorShape>
+  </nestedChildShapes>
+</useCaseDiagram>

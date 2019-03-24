@@ -1,8 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="fe560f34-1b24-48c8-b19c-f5160fd0fbf5"
   name="FinalExamSoftwareConstruction" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="e32f11ab-80b8-486c-9448-a665b2f79e65">
+      <body>Attendance System:
+The Smart Attendance will help mark the attendance of students attending a particular lecture, without the disadvantages of regular paper attendance sheets. </body>
+    </comment>
+    <comment
+      Id="7382168c-e803-42bd-b113-7b94a9d6ea38">
+      <body>-Electronic sign in
+-Electronic sign out</body>
+    </comment>
+    <comment
+      Id="6265aa76-c38e-4c69-a648-6d66b9db7eb6">
+      <body>-Create electronic class roster
+-View history of per student
+-View history of lecture attendance
+-Edit Rosters
+-Edit Attendance</body>
+    </comment>
+    <comment
+      Id="e4dcd6bc-dec3-44c8-a651-bb630e868f29">
+      <body>Constraints:
+Students must have smart card every lecture</body>
+    </comment>
+    <comment
+      Id="6128babb-4d94-4166-9855-55c872600cdb">
+      <body>-Add students to school rosters
+-Gather stats for overall class sizes
+</body>
+    </comment>
+    <comment
+      Id="9a73f1f3-7dd1-45ba-bd7d-8d300c1554e9">
+      <body>Functional Requirements</body>
+      <annotatedElements>
+        <commentMoniker
+          Id="7382168c-e803-42bd-b113-7b94a9d6ea38"
+          LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+        <commentMoniker
+          Id="6128babb-4d94-4166-9855-55c872600cdb"
+          LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+        <commentMoniker
+          Id="6265aa76-c38e-4c69-a648-6d66b9db7eb6"
+          LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -17,28 +63,1791 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="e189354a-7545-4313-8254-9cb5aa7634e7"
+        name="Student"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f6fdc58b-b96a-4b0a-b342-ca1174dc3bbf"
+            isDerived="false"
+            sourceEndRoleName="Student"
+            targetEndRoleName="Attendance System Using Smart Card"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="8eb5630e-b432-4081-8222-ceda95e76119"
+              LastKnownName="Attendance System Using Smart Card"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe6387f1-ec72-4a8d-a525-a46400204028"
+                  name="Student"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ee8003a-d364-4ad9-b1ce-2230e10abc36"
+                  name="Attendance System Using Smart Card"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="db2a62a8-b1c1-4139-adfd-ec576e4c2cb7"
+            isDerived="false"
+            sourceEndRoleName="Student"
+            targetEndRoleName="Sign In Lecture"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1543bf41-7a07-42d1-beae-019e7ee6b7d7"
+              LastKnownName="Sign In Lecture"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e58dfca-35e1-40cc-b9c6-0f0dd10f26df"
+                  name="Student"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2d00dc0-3e0b-40b4-ac07-2fc7cecdba05"
+                  name="Sign In Lecture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="e1519a26-ec6f-4fc4-9cfe-1eeafaf04387"
+        name="Lecturer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="60b484ee-0633-4978-aac2-6d1a400aaa2a"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="Attendance System Using Smart Card"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="8eb5630e-b432-4081-8222-ceda95e76119"
+              LastKnownName="Attendance System Using Smart Card"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca6f8704-4ce8-456c-a672-bfed4957f438"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12659434-4943-4592-86c9-f770a88ff302"
+                  name="Attendance System Using Smart Card"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8c2a9f8e-8fd5-4fb9-bfbf-c888b793345b"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="Create Class Roster"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1491da55-090c-403c-a946-a995deb19293"
+              LastKnownName="Create Lecture Roster"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b266e037-675c-465b-8dc9-dbba95349be6"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad453304-debb-43f1-9d67-cf26aa323419"
+                  name="Create Class Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cd7e2e8d-a1d8-4c0b-a119-6ec6cd1fc717"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="Create Class Rosters"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5c549aa9-7715-4817-8d2a-109ce82ec74b"
+              LastKnownName="Create Class Rosters"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08e3faa6-57d1-411c-bf58-f50c4cbf6be5"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9582c8a-39ab-414d-b565-33830b5fd4ed"
+                  name="Create Class Rosters"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="606850a9-7897-4e40-a439-c0d0bbfa452b"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="View attendance history"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="86b8db72-6c6a-4bbc-a8ad-307b73c26dfc"
+              LastKnownName="View attendance history"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d202ffe-7688-4647-9feb-d026831353cc"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="acdeea4b-3b4c-4080-a55f-8340f6496a99"
+                  name="View attendance history"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="05eb4bd7-4bcd-4df3-a53d-30259675512b"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="Verify student count"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="20052c1f-5690-47f4-b105-1b54e75db8ef"
+              LastKnownName="Verify student count"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d8e4f753-8cc2-4ea6-bb64-d4bea65bc3b7"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d44a177-2a2d-445c-a544-8f47ec11418b"
+                  name="Verify student count"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="8eb5630e-b432-4081-8222-ceda95e76119"
+        name="Attendance System Using Smart Card"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="46164f11-03ef-4fe4-aced-c1b02ae1d179"
+        name="Administrators"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b4f2752d-1075-4573-9b79-8c08b01d9b86"
+            isDerived="false"
+            sourceEndRoleName="Administrators"
+            targetEndRoleName="Attendance System Using Smart Card"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="8eb5630e-b432-4081-8222-ceda95e76119"
+              LastKnownName="Attendance System Using Smart Card"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e553eff-88ee-495d-9664-e695c8d8ddec"
+                  name="Administrators"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0363b2e-8a22-42bc-810e-f728fed36aa0"
+                  name="Attendance System Using Smart Card"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="945a8bb0-cbac-40f5-a2e7-be5699d20be0"
+            isDerived="false"
+            sourceEndRoleName="Administrators"
+            targetEndRoleName="Add Student to Database"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dcfe5113-8a59-4d19-bb97-046982c22516"
+              LastKnownName="Add Student to Database"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d46464b3-320e-4f58-a6b7-4550361de439"
+                  name="Administrators"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54c0deef-2bad-49db-a3da-61ea80be255c"
+                  name="Add Student to Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ab274d04-9e89-4873-98cd-9696d76d3922"
+            isDerived="false"
+            sourceEndRoleName="Administrators"
+            targetEndRoleName="Gather stats on lecture attendance"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2c311478-5d37-476d-9167-daf390f93c50"
+              LastKnownName="Gather stats on lecture attendance"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e913ac2f-16aa-43e7-be07-3a912ebe57c1"
+                  name="Administrators"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3166403-235d-40de-bac3-7fb610dff4a0"
+                  name="Gather stats on lecture attendance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1543bf41-7a07-42d1-beae-019e7ee6b7d7"
+        name="Sign In Lecture"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="42313647-35fe-45fa-9082-edb96de41ed9"
+            isDerived="false"
+            sourceEndRoleName="Sign In Lecture"
+            targetEndRoleName="Sign Out Lecture"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e41d2f26-b1e3-4873-a16e-ba200e724bf4"
+              LastKnownName="Sign Out Lecture"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="965f3a14-d8d0-42a6-8708-084520df6ada"
+                  name="Sign In Lecture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="831bc984-0583-4acf-8468-66f2cc1f164e"
+                  name="Sign Out Lecture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e41d2f26-b1e3-4873-a16e-ba200e724bf4"
+        name="Sign Out Lecture"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1491da55-090c-403c-a946-a995deb19293"
+        name="Create Lecture Roster"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="564d02ba-0074-4251-b5ba-4b6d83a46c50"
+            isDerived="false"
+            sourceEndRoleName="Create Class Roster"
+            targetEndRoleName="Edit Class Rosters"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a5e6df3c-fd47-4160-ae33-f339322fb2e6"
+              LastKnownName="Edit Lecture Rosters"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50ee4bff-cf0c-4bc5-8d44-687dd37da79b"
+                  name="Create Class Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dcc7adb0-84e6-4e54-9868-ec4d8da97b29"
+                  name="Edit Class Rosters"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dcfe5113-8a59-4d19-bb97-046982c22516"
+        name="Add Student to Database"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a5e6df3c-fd47-4160-ae33-f339322fb2e6"
+        name="Edit Lecture Rosters"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5c549aa9-7715-4817-8d2a-109ce82ec74b"
+        name="Create Class Rosters"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f1aa1fcd-884f-4775-93eb-a0c849e60063"
+            isDerived="false"
+            sourceEndRoleName="Create Class Rosters"
+            targetEndRoleName="Edit Class Roster"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="875dff76-dadf-4840-b1c1-5273ca7c5cca"
+              LastKnownName="Edit Class Roster"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f49fdc94-41f6-4f3e-9d3b-ad64c9a5f39f"
+                  name="Create Class Rosters"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5be06e63-53ea-4862-90df-bc358dae2320"
+                  name="Edit Class Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="875dff76-dadf-4840-b1c1-5273ca7c5cca"
+        name="Edit Class Roster"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="86b8db72-6c6a-4bbc-a8ad-307b73c26dfc"
+        name="View attendance history"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f40dfc6f-86fb-4c43-877c-4e8f52e9eba4"
+            isDerived="false"
+            sourceEndRoleName="View attendance history"
+            targetEndRoleName="Edit attendance history"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8136a404-4072-470b-9817-bf63f6fa8752"
+              LastKnownName="Edit lecture attendance history"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a57702c6-72c5-40e9-ad31-360558e8659e"
+                  name="View attendance history"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eaac0340-3f9a-451a-89eb-e8d235623a4f"
+                  name="Edit attendance history"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="57142d60-eef5-47a1-a4be-c5895fa147a1"
+            isDerived="false"
+            sourceEndRoleName="View attendance history"
+            targetEndRoleName="Edit student attendance manually"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fcd7c01d-0071-44c0-a83c-6ebc2c4ea9e9"
+              LastKnownName="Edit student attendance"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="765b32ca-a7bc-4ce3-9632-779d00c02561"
+                  name="View attendance history"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="156aa479-a851-450a-8960-e141b63c80cc"
+                  name="Edit student attendance manually"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8136a404-4072-470b-9817-bf63f6fa8752"
+        name="Edit lecture attendance history"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="93bd88af-0d94-48b4-80a0-aecd229d777d"
+        name="E"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fcd7c01d-0071-44c0-a83c-6ebc2c4ea9e9"
+        name="Edit student attendance"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c311478-5d37-476d-9167-daf390f93c50"
+        name="Gather stats on lecture attendance"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="20052c1f-5690-47f4-b105-1b54e75db8ef"
+        name="Verify student count"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7982400f-6678-49e6-ae45-10f78f569686"
+        name="Student"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4cf1b0d1-dddf-45a4-beff-ea35e63f2b4a"
+            isDerived="false"
+            sourceEndRoleName="Student"
+            targetEndRoleName="Student Roster"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3768b554-ee9b-40ed-af6b-3e0cb223b718"
+              LastKnownName="Student Roster"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="841d98cd-a065-42c3-86cb-cd0380212c2e"
+                  name="Student"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6ad295c6-8ea4-4a0b-b3d7-b1493d2c8aa4"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9d702e91-8acf-49da-a587-61b4691ca113"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93fe40c3-cd78-4726-8329-cc17ab6eaef8"
+                  name="Student Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2eaf941e-6f75-43d5-acb8-2e43ce466bfd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="481aee4a-f32e-42ee-bf24-369b8be924db"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3768b554-ee9b-40ed-af6b-3e0cb223b718"
+        name="Student Roster"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c9c802d7-1dc0-4faf-9e99-01c7b20d6781"
+            isDerived="false"
+            sourceEndRoleName="Student Roster"
+            targetEndRoleName="Sign-In Database"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="baf66070-4b72-4cfc-a8c1-49f319c4af43"
+              LastKnownName="Sign-In Database"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b30969cf-b6fe-4197-9510-9835f082728c"
+                  name="Student Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b0475406-1747-4b66-8570-b45d5b41a92f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c1abf844-147a-4002-9569-8b85235c0311"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72584863-daf3-4f4d-92ed-8822be8273c4"
+                  name="Sign-In Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2809f778-9418-4911-bf2d-d1a3aa668f72"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5948c20c-dc04-40c2-81e6-6ff09ac1334d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="baf66070-4b72-4cfc-a8c1-49f319c4af43"
+        name="Sign-In Database"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cbaa36e4-bf60-4029-b0d6-07421d818131"
+        name="Lecturer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="477066bc-5518-46eb-99b7-28baf205fe43"
+            isDerived="false"
+            sourceEndRoleName="Lecturer"
+            targetEndRoleName="Lecture"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4dcec1f3-4c52-43a3-8d9c-71dfa92447d2"
+              LastKnownName="Lecture"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60f09570-4cdf-44e1-b6a8-7d555544f00d"
+                  name="Lecturer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="87a53d1f-4df9-422b-a7db-b78d26d4ea98"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="781ab180-a081-438e-8461-c9678706e561"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="296264b2-5618-4772-bcc1-ef6a424dc40d"
+                  name="Lecture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="65f7b249-66e6-4d8e-a501-86d19c30500d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0d352832-b93a-455b-862c-8521a39cabb9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="65eb55fe-6c5f-43e1-bbbb-3295ddbf7e5c"
+        name="Administrators"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="64b29afb-4536-4b87-b36c-3dd6ed3500b9"
+            isDerived="false"
+            sourceEndRoleName="Administrators"
+            targetEndRoleName="Student Database"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="76231897-58df-4010-9f00-224fc36d1beb"
+              LastKnownName="Student Database"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="31f29c37-731d-41db-8766-cf649259cf90"
+                  name="Administrators"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="53a3587c-43ff-4edb-8795-45cb051c0f5d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bd228a6d-d8ad-4d2d-82e1-93ac9b18357e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f0b2861-2401-4abc-8248-1df96113473c"
+                  name="Student Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="76231897-58df-4010-9f00-224fc36d1beb"
+        name="Student Database"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3204d0de-1612-48d5-9543-6282e071a504"
+            isDerived="false"
+            sourceEndRoleName="Student Database"
+            targetEndRoleName="Student roster"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3768b554-ee9b-40ed-af6b-3e0cb223b718"
+              LastKnownName="Student Roster"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5754d13b-c98b-42da-b2ff-88f6123a97f6"
+                  name="Student Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="478b4f8c-a90c-4faa-aeed-d9bebf52a229"
+                  name="Student roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="94b82882-c6f6-4b33-98ec-b4109d1eeb6a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fbd5f8cf-ba35-4e76-ab70-456b02394aa5"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4dcec1f3-4c52-43a3-8d9c-71dfa92447d2"
+        name="Lecture"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7e55723a-b944-4265-b00f-ddcaaf49081f"
+            isDerived="false"
+            sourceEndRoleName="Lecture"
+            targetEndRoleName="Student Roster"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3768b554-ee9b-40ed-af6b-3e0cb223b718"
+              LastKnownName="Student Roster"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f76b1050-7186-4d7c-bdc5-5070859858ea"
+                  name="Lecture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c2c904ef-a7bd-4010-aec7-6ce3d9857fba"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2b3791ff-b4b7-4bb3-a439-b55976e1b831"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7a02b610-21f7-47a2-a67b-5b91c3646ab5"
+                  name="Student Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5a2a5fc4-5b7e-4152-95d7-73799c0ad462"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7992988a-9320-4b6f-bab1-06205c5c478a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8d6c7055-852d-4f95-bdd1-df8c47acc0f2"
+        name="Class Roster"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="9abcc37c-778a-4517-850e-173b3b5d01d4"
+            isDerived="false"
+            sourceEndRoleName="Class Roster"
+            targetEndRoleName="Sign-In Record"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9e8d56ff-a1d0-4981-8da9-fa7c10f1277e"
+              LastKnownName="Sign-In Record"
+              LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4874f74e-ebfe-4f8a-94ba-dabc52ac6de1"
+                  name="Class Roster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="481ce335-2668-440d-bc95-9cda73d1af23"
+                  name="Sign-In Record"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ca883580-a496-42a8-923e-25b3ccca4f91"
+            name="Class Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d6fdd152-a123-4748-98ee-8c1b42c9aaeb"
+            name="Lecturer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="06d74611-5cb5-44e2-8d8e-eb5b70106bd4"
+            name="Students"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="23b9a1dc-d4f6-494b-8804-3fb4998815a4"
+            name="Semester"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a56e1fab-1a89-4ca7-bd4e-842fe9e571de"
+            name="Location"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e8d56ff-a1d0-4981-8da9-fa7c10f1277e"
+        name="Sign-In Record"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="12494843-b03c-4e34-b0e0-5681291b0f02"
+            name="Student Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b585f7dc-f3bf-4d93-9205-dedf23ba1b0d"
+            name="Lecture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="613ecd5c-0561-4d33-ab2b-97aa262e13bc"
+            name="Lecture Date"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="de4bb87d-9748-4b1d-9896-fc5971e26114"
+            name="Sign-In Time"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dd7b271a-e93e-4af8-93cc-26bd7abb1a8a"
+            name="Sign-out Time"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8e09ac02-d3c1-412c-a54b-afd08afad520"
+            name="Lecturer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="7908dda2-d7ac-4082-bdeb-7696d979350e"
+        name="ActivityDiagramSignInOut"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="f410bf82-9042-410c-9f94-f4367266f77a"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6f402675-42fd-4cb0-8d7b-2e67cde77e63"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="22a6d04b-5d19-406e-ae77-ed61727ebb17"
+                  LastKnownName="Electronically Sign-In to Lecture"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="3fe1674b-5147-4dcd-b8c5-861d65892556"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="22a6d04b-5d19-406e-ae77-ed61727ebb17"
+            name="Electronically Sign-In to Lecture"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1f96d44c-4e77-462c-bb06-05afe736b089"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6297fba0-4dea-41f4-aef3-01802142fc5d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6a932911-f786-4e28-ab88-4ff9f1e9aec3"
+            name="Electronically Sign-Out of Lecture"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e42f106a-93ae-4145-a54e-038d6926165a"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="3fe1674b-5147-4dcd-b8c5-861d65892556"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="6297fba0-4dea-41f4-aef3-01802142fc5d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="942d1731-5dde-4626-95d9-36b42a442c8c"
+                guard="Sign-In Successful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6a932911-f786-4e28-ab88-4ff9f1e9aec3"
+                  LastKnownName="Electronically Sign-Out of Lecture"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="7c86604a-2068-4d4d-8648-bc97ddca8950"
+                guard="Sign-In not successful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8bc4b743-dfc0-4f52-a26d-2cc0e86e7e7d"
+                  LastKnownName="Lecturer adds students manually"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="8bc4b743-dfc0-4f52-a26d-2cc0e86e7e7d"
+            name="Lecturer adds students manually"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d8590579-6e41-419f-a5e5-7c3694c6d14b"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="45117286-4a8f-47cd-9ca8-131d22584a14"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="45117286-4a8f-47cd-9ca8-131d22584a14"
+            name="ActivityFinal2"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="2a3482a2-1f7e-46a0-b179-9e576664a95e"
+        name="ActivityDiagramCreateRoster"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="7839292d-182c-4ed4-8ad2-d38a10e61ec3"
+            name="Initial1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="faa12e43-ef73-4c86-970d-b8064e29b846"
+            name="Action1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="b0557079-be99-4e93-a51b-635a3fd6081b"
+        name="ActivityDiagramVerifyStudentCount"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="3b8f4176-51cb-4d82-bdf6-a8d16d6c2c91"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f3ac6fa5-3c60-47ae-a8eb-bf80adceea55"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5f72f699-a4c2-4115-8487-fec998059a58"
+                  LastKnownName="Students Sign-In"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="6fb112e1-6b8b-41bd-998c-0a0abbea15b8"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="5f72f699-a4c2-4115-8487-fec998059a58"
+            name="Students Sign-In"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ad8fde24-d913-4064-bdca-889dab27f5df"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="be2bffaf-6ab7-4fdb-8e6a-1cd93fd5415d"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="92c0eef7-03ed-4012-b4f1-7800e45e00a9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="99b61a49-1cb9-4328-a7de-35aa25b8d05a"
+                  LastKnownName="Electronic counter adds 1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="be2bffaf-6ab7-4fdb-8e6a-1cd93fd5415d"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d30fb9b6-141f-4ef5-9f49-55cd84f40973"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b476852c-8281-440a-be74-af4ce92d7735"
+                  LastKnownName="Electronic Sign-In"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="eda7210f-d3c7-4be6-8b01-ce962e226b4e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9ea0aef5-5d6b-4633-8f87-810429700ac4"
+                  LastKnownName="Paper Sign-In"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="b476852c-8281-440a-be74-af4ce92d7735"
+            name="Electronic Sign-In"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1ccaa76b-628f-4d8f-ac9c-f1dd0f691357"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c"
+                  LastKnownName="Join1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9ea0aef5-5d6b-4633-8f87-810429700ac4"
+            name="Paper Sign-In"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="eb7f8159-8027-44c9-84e3-0fcdf79af584"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c"
+                  LastKnownName="Join1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1e17c4c5-d61c-4e09-a79c-32853bf39e90"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d5ff728e-a242-4e0a-9340-e9963d241c2b"
+                  LastKnownName="Verify student count match"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="d5ff728e-a242-4e0a-9340-e9963d241c2b"
+            name="Verify student count match"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c2ba6531-122d-4027-b579-8f0b96c02187"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="61c55705-8651-4fcb-9fb2-29b5690cb44e"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="99b61a49-1cb9-4328-a7de-35aa25b8d05a"
+            name="Electronic counter adds 1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9b707da9-2f09-45ea-b5b1-b2209366bac8"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c"
+                  LastKnownName="Join1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="61c55705-8651-4fcb-9fb2-29b5690cb44e"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="92d3b089-8bf4-4885-8b4e-d07e59561833"
+                guard="Count Matches"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="6fb112e1-6b8b-41bd-998c-0a0abbea15b8"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a77d0479-4357-43f3-ab7b-aef8fee674cf"
+                guard="Recount"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="13e05ad6-6fd9-47b9-a187-e7b381ca626c"
+                  LastKnownName="Join1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="2ff3901a-ad33-48c6-b026-b09c36aff030"
+        name="ActivityDiagramAddStudent"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="80fa8f29-aa1d-4e89-a297-2517bae94f46"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0211a588-1f5e-42d1-877c-83a2fd0b53f7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0e27953f-ccb7-4bd0-a4ef-4311d9544f3e"
+                  LastKnownName="Student Applies to School"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="0e27953f-ccb7-4bd0-a4ef-4311d9544f3e"
+            name="Student Applies to School"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="932e0726-9151-4d2d-ae2f-1c6aea9c9aee"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ecb17804-11b5-4f9e-b5de-541de3c3dc07"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="44ec88df-01c2-4d8a-bcaf-5d5b7e066619"
+            name="Add Student to School Database"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b3630d42-7140-469e-b27a-1dd86a69e586"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="5edc1187-7197-4e68-a599-00f431fb1c28"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="ecb17804-11b5-4f9e-b5de-541de3c3dc07"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="16509530-3a52-4e93-89da-821938dfada1"
+                guard="Accepted"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="44ec88df-01c2-4d8a-bcaf-5d5b7e066619"
+                  LastKnownName="Add Student to School Database"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6d13edc8-8017-4c12-9c19-691dbf2853ce"
+                guard="Not Accepted"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9c2a92f6-d2a5-4ff1-b06f-e13c5d2867b9"
+                  LastKnownName="Added to seperate database"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="5edc1187-7197-4e68-a599-00f431fb1c28"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="9c2a92f6-d2a5-4ff1-b06f-e13c5d2867b9"
+            name="Added to seperate database"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="753d2528-9e7f-4da5-aa0b-c7a45949af91"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="5edc1187-7197-4e68-a599-00f431fb1c28"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="FinalExamSoftwareConstruction.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>

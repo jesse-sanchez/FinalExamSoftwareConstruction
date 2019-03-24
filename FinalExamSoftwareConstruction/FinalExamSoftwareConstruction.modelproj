@@ -22,7 +22,56 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ActivityDiagramAddStudent.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ActivityDiagramAddStudent.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ActivityDiagramAddStudent.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ActivityDiagramSignInOut.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ActivityDiagramSignInOut.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ActivityDiagramSignInOut.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ActivityDiagramVerifyStudentCount.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ActivityDiagramVerifyStudentCount.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ActivityDiagramVerifyStudentCount.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagramAttendanceSystem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagramAttendanceSystem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagramAttendanceSystem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelClassRoster.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelClassRoster.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ModelClassRoster.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UseCaseAttendanceSystem.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCaseAttendanceSystem.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCaseAttendanceSystem.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
+    <Content Include="BrainstormingAttendanceSystem.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BrainstormingAttendanceSystem.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BrainstormingAttendanceSystem.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\FinalExamSoftwareConstruction.uml">
       <SubType>Content</SubType>
     </Content>
